@@ -1,0 +1,19 @@
+h1 {
+    color: green;
+}
+
+h2 {
+    color: green;
+}
+
+#economy {
+    color: goldenrod;
+}
+
+.creation-date{
+    color: #ccc;
+}
+
+* {
+    color: #3b0b0b;
+}
