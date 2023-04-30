@@ -17,7 +17,7 @@ body{
 
 /* Estilo 2 */
 
-header{
+header, footer{
     padding: 16px;
     background-color: #182C61;
     color: #ecf0f1;
@@ -44,7 +44,8 @@ header nav li a{
 
 /*Estilo 4*/
 
-header .container{
+header .container,
+footer .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
