@@ -13,15 +13,20 @@
             <h2>Depósitos</h2>
             <form id="form_dep">
                 <input type="text" id = "nome_beneficiario" required placeholder="Nome completo do beneficiário" />
+                <p class="error_message">
+                    O nome deve ser completo!
+                </p>
                 <input type="number" id = "numero_conta" required placeholder="Número da conta" />
                 <input type="number" id = "valor_deposito" required placeholder="Valor" />
                 <textarea placeholder="Descrição (opcional)" id = "descricao"></textarea>
                 <button type="submit" id = "btn_depositar">Depositar</button>
             </form>
+            <!-- Adicionando elementos visuais -->
+            <p class="success_message">
+                <!-- Remover conteúdo fake após a construção do query.selector
+                O valor de: <b>1000</b> foi enviado para o cliente: <b>Nome do cliente</b> - conta: <b>1234</b> -->
+            </p>
         </div>
         <script src="./main.js"></script>
-        <!-- <script>
-            alert("Olá mundo 2");
-        </script> -->
     </body>
 </html>

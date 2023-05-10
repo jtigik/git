@@ -40,3 +40,25 @@ button {
 button:hover {
     background-color: #27ae60;
 }
+.success_message{
+    background-color: #27ae60;
+    padding: 16px;
+    color: #fff;
+    /* Mostrar a menssagem somente após o clique no 'submit'*/
+    display: none;
+}
+
+.error_message{
+    font-size: 12px;
+    padding: 8px;
+    background-color: red;
+    color: #fff;
+    margin-bottom: 8px;
+    display: none;
+}
+
+input.error{/*Recomenda-se este tipo de estrutura para validar campos*/
+    color: red;
+    border-color: red;
+    outline-color: red;
+}
