@@ -69,9 +69,9 @@ $(document).ready(function(){
         }, 1000)
     })
 
-    $('nav .container').click(function(){
-        $('html').animate({
-            scrollTop: destino.offset().top
-        }, 1000)
-    })
+    // $('.container ul').click(function(){
+    //     $('html').animate({
+    //         scrollTop: destino.offset().top
+    //     }, 1000)
+    // })
 })
