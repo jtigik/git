@@ -29,13 +29,9 @@ $(document).ready(function(){
             telefone: {
                 required: true
             },
-            mensagem: {
-                required: true
-            },
             veiculo_interesse: {
-                required: false
-            },
-
+                required: true
+            }
         }, 
         messages: {
             nome: 'Por favor, informe o nome da forma correta',
@@ -62,16 +58,8 @@ $(document).ready(function(){
 
         $('#veiculo_interesse').val(nomeVeiculo);
 
-        // alert($(this).parent().find('h3').text())
-
         $('html').animate({
             scrollTop: destino.offset().top
         }, 1000)
     })
-
-    // $('.container ul').click(function(){
-    //     $('html').animate({
-    //         scrollTop: destino.offset().top
-    //     }, 1000)
-    // })
 })
