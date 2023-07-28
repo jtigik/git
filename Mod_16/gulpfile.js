@@ -1,13 +1,15 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass')); // Trazendo pacotes rescém importados para o projeto
+const sass = require('gulp-sass')(require('sass')); 
+const sourcemaps = require('gulp-sourcemaps');
 
-// Explicando: 
-// gulp-sass - Responsável por fazer a integração do Gulp com o SASS.
-// sass - Responsável por realizar a converção do SASS para CSS.
 
-function compilaSass(){ //Criando uma função que lê todos os arquivos SCSS e converte para CSS.
-    return gulp.src('./source/styles/main.scss')// Mostra o caminho à todos arquivos .SCSS
-        .pipe(sass()) // Função responsável pelo encadeamento das execuções do Gulp
+function compilaSass(){ 
+    return gulp.src('./source/styles/main.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'compressed' // Criando uma versão minificada do .CSS.
+        })) 
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./build/styles')); // Função responsável por enviar os arquivos criados para uma pasta
 }
 
@@ -30,7 +32,10 @@ function dizTchau(){
     console.log("Tchau Gulp!!!");
 }
 
-// exports.default = gulp.parallel(funcaoPadrao, dizOi);
+
 exports.default = gulp.series(funcaoPadrao, dizOi);
 exports.dizOi = dizOi;
 exports.sass = compilaSass;
+exports.watch = function(){ //Criada tarefa que 'olha' para os arquivos *.sass em busca de alterações.
+    gulp.watch('./source/styles/*.scss', { ignoreInitial: false }, gulp.series(compilaSass));
+}
