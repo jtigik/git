@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "less": "less-watch-compiler ./src/styles ./build/styles/main.less",
+    "less": "less-watch-compiler ./src/styles ./build/styles",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
