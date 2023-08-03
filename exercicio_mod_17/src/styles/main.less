@@ -22,30 +22,27 @@ li{
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+}
 
-    @media @breakPointTablet{
+@media @breakPointTablet{
+    .container {
         max-width: 80%;
-
-        .container {
-            max-width: 80%;
-        }
-
-        .products {
-            grid-template-columns: repeat(2, 48.5%);
-            column-gap: 3%;
-        }
     }
 
-    @media @breakPointMobile{
-        .products {
-            display: block;
-        }
-    
-        .product-item  {
-            margin-bottom: 32px;
-        }
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media @breakPointMobile{
+    .products {
+        display: block;
     }
 
+    .product-item  {
+        margin-bottom: 32px;
+    }
 }
 
 header {
