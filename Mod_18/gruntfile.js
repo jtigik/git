@@ -2,7 +2,7 @@ module.exports = function(grunt){
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {
-            development:{ //Ambiente padrão. Grunt permite criar task em diferentes ambientes.
+            development:{ 
                 files:{
                     'main.css': 'main.less'
                 }
@@ -25,6 +25,9 @@ module.exports = function(grunt){
                     'main2.css': 'main.scss'
                 }
             }
+        },
+        concurrent: {
+            target: ['olaGrunt','less', 'sass', 'tarefaDemorada']
         }
     })
 
@@ -36,8 +39,17 @@ module.exports = function(grunt){
         }, 3000); 
     })
 
-    grunt.loadNpmTasks('grunt-contrib-less');// Task para compilar o LESS
-    grunt.loadNpmTasks('grunt-contrib-sass');// Task para compilar o SASS
+    grunt.registerTask('tarefaDemorada', function(){
+        const done = this.async();
+        setTimeout(function(){
+            console.log('Olá Grunt novamente!');
+            done();
+        }, 3000); 
+    })
 
-    grunt.registerTask('default', ['less', 'sass']);
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-concurrent');
+
+    grunt.registerTask('default', ['concurrent']);
 }
