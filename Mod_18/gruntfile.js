@@ -26,13 +26,19 @@ module.exports = function(grunt){
                 tasks: ['replace:dev']
             }
         }, 
-        replace: { //Replace: Realiza a substituição de palavras, 
+        replace: { 
             dev: { 
                 options: {
-                    patterns: [{ //conforme definido em patterns.
-                        match: 'ENDERECO_DO_CSS',
-                        replacement: './styles/main.css'
-                    }] 
+                    patterns: [
+                        { 
+                            match: 'ENDERECO_DO_CSS',
+                            replacement: './styles/main.css'
+                        },
+                        { 
+                            match: 'ENDERECO_DO_JS',//Procura o arquivo pelo nome
+                            replacement: '../src/scripts/main.js' //Executa a substituição.
+                        }
+                    ] 
                 },
                 files: [
                     {
