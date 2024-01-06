@@ -1,0 +1,99 @@
+body{
+    font-family: Roboto, sans-serif;
+}
+
+.navbar{
+    background-color: #006266;
+}
+
+.carousel-item{
+    height: 430px;
+}
+
+.carousel-item img{
+    max-width: 100%;
+}
+
+#cabecalho .nav .nav-link.active{
+    background-color: #d1d8e0;
+    color: #006266;
+}
+
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover{
+    color: #d1d8e0;
+}
+
+.navbar-toggler{
+    background-color: #d1d8e0;
+}
+
+.section-title{
+    font-family: Smythe, cursive;
+    font-size: 2.5em;
+}
+
+#produtos{
+    background-color: rgba(0, 66, 69, 0.3);
+}
+
+.text-colored{
+    color: #006266;
+}
+
+#fale-conosco button {
+    background-color: #006266;
+    color: #d1d8e0;
+}
+
+.social-links li{
+    list-style: none;
+    display: inline;
+}
+
+.social-links a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* @media (max-width: 1024px){
+    .col{
+        width: 33%;
+    }
+} */
+
+@media (max-width: 1023px){
+    .carousel-item{
+        height: 215px;
+    }
+    .carousel-item img{
+        max-width: 100%;
+    }
+    .container {
+        max-width: 80%;
+    }
+    .col{
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px){
+    .carousel-item{
+        height: 107px;
+    }
+    .carousel-item img{
+        max-width: 100%;
+    }
+    .container {
+        max-width: 80%;
+    }
+    .col{
+        width: 100%;
+    }
+}

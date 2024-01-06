@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "git",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Mod_16"
+	}
+}

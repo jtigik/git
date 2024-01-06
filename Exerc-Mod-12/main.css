@@ -1,0 +1,50 @@
+body{
+    padding: 50px;
+    background-color: rgb(235, 228, 221);
+    font-family: 'Roboto', sans-serif;
+    color: #3f3e3e;
+}
+
+a{
+    color: #3f3e3e;
+}
+
+.row{   
+    width: 100%;
+}
+
+form{
+    max-width: 640px;
+}
+
+.form-label{
+    margin-top: 1.5em;
+    margin-bottom: 0.4em;
+}
+
+.form-check{
+    margin-top: 1.5em;
+}
+
+.error {
+    color: red;
+    border-color: red;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen  and (max-width: 640px){
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen  and (min-width: 641px) and (max-width: 1023px){
+    .container {
+        max-width: 90%;
+    }
+}
